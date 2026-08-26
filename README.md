@@ -8,36 +8,60 @@ Reykjavík by Katya.
 
 ---
 
+## How this was built
+
+It started with a conversation, not a brief. In June 2026 I sat down with Katya
+to understand not only what she wanted on a page, but where she wants the
+business to be in a few years' time.
+
+Several parts of this site exist because of that conversation rather than
+because I proposed them:
+
+- **Courses** — she wants to teach raw baking, and in time to give other people
+  work rather than bake alone
+- **The blog** — her customers ask the same questions about raw food and
+  fermentation, and she would rather answer them properly once
+- **The Friday Box** — her own idea for a recurring weekly order
+- **No shopping cart** — deliberately. She wants to speak to the person who is
+  ordering, so the site sends her an enquiry instead of taking a payment
+
+Everything on the page is hers: her photographs, her ingredient lists, and her
+measured nutrition figures where she has them — and no figures where she
+hasn't.
+
 ## About the site
 
-A single-page site built as one hand-written HTML file — no framework, no build
-step, no dependencies. It covers Katya's story, the full cake range with
-ingredients and nutrition, small cakes and the Friday Box, catering for events,
-and upcoming courses.
-
-Every cake photograph is Katya's own.
+A single page of hand-written HTML and CSS — no framework, no build step, no
+dependencies. It covers Katya's story, the full cake range with ingredients and
+nutrition, small cakes and the Friday Box, catering for events, and the courses
+to come.
 
 ## Structure
 
 ```
 index.html                        the site
+styles.css                        all styling
+site.js                           gallery, tabs, modals
+blog.html  ·  blog/               blog index and posts
 images/                           photos and logo
 images/images_20.08.2026/         current photo set (card / gallery / hero crops)
-blog.html                         blog page
 ```
 
 ## How to update
 
-1. Edit `index.html` (or drop in a newer dated version from the working folder)
+1. Edit `index.html`, `styles.css` or `site.js`
 2. Commit and push to `main`
 3. GitHub Pages redeploys within about a minute — hard-refresh to see it
 
-Image naming convention: `<cake>_main` is the master; `_card` (4:3), `_gal` (1:1)
-and `_hero` are the web-sized crops cut from it.
+Image naming: `<cake>_main` is the master; `_card` (4:3), `_gal` (1:1) and
+`_hero` are the web-sized crops cut from it.
+
+Note that hero images are loaded from `styles.css` via `background-image`, so a
+check that only looks at `src` and `href` in the HTML will miss them.
 
 ## Built with
 
-Plain HTML and CSS, hosted on GitHub Pages.
+Plain HTML, CSS and JavaScript, hosted on GitHub Pages.
 
 ---
 
