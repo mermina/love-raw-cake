@@ -6,263 +6,108 @@
 <title>Love Raw Cake — healthy raw cakes made with love · Reykjavík</title>
 <meta name="description" content="Vegan, gluten-free raw cakes handmade in Reykjavík with whole, real ingredients. Cake as nourishment — no guilt, no waste, made with love." />
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Bakery", "LocalBusiness"],
+      "@id": "https://loverawcake.is/#business",
+      "name": "Love Raw Cake",
+      "description": "Vegan, gluten-free raw cakes handmade in Reykjavík, Iceland, from whole, real ingredients — no refined sugar, flour, dairy or eggs. Founded by Katya in 2020.",
+      "url": "https://loverawcake.is/",
+      "image": "https://loverawcake.is/images/chocbanana-2.jpg",
+      "founder": { "@type": "Person", "name": "Katya", "jobTitle": "Raw-cake crafter" },
+      "foundingDate": "2020",
+      "servesCuisine": ["Raw", "Vegan", "Gluten-free desserts"],
+      "areaServed": { "@type": "City", "name": "Reykjavík" },
+      "address": { "@type": "PostalAddress", "addressLocality": "Reykjavík", "addressCountry": "IS" },
+      "telephone": "+354-000-0000",
+      "email": "hello@loverawcake.is",
+      "priceRange": "$$",
+      "sameAs": ["https://instagram.com/love.raw.cake"],
+      "knowsAbout": ["Raw cakes", "Vegan cakes", "Gluten-free cakes", "Healthy desserts", "Event catering"]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://loverawcake.is/#faq",
+      "mainEntity": [
+        { "@type": "Question", "name": "Are the raw cakes really healthy?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. They are built from whole, real ingredients: home-made plant milks, nuts, fruit, berries, cacao and coconut butter. No refined sugar, no flour, no dairy, no eggs. Naturally vegan and gluten-free." } },
+        { "@type": "Question", "name": "Do you cater to nut allergies?", "acceptedAnswer": { "@type": "Answer", "text": "No. Nuts are a core ingredient in almost everything, so these cakes are not safe for anyone with a serious nut allergy." } },
+        { "@type": "Question", "name": "How much notice do you need to order a cake?", "acceptedAnswer": { "@type": "Answer", "text": "Usually 1 to 3 days. Some recipes ferment for 24 hours; a few can be ready the next day. For events, the more notice the better." } },
+        { "@type": "Question", "name": "How do I pay and collect my order?", "acceptedAnswer": { "@type": "Answer", "text": "Pickup or delivery. Delivery is free in the Reykjavik capital area on orders of 15,000 ISK and over, otherwise from 2,000 ISK. The day, time and payment are agreed when you get in touch." } },
+        { "@type": "Question", "name": "Can I order raw cakes for a company or event?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Finger-food minis, platters, and larger orders from around 50 pieces. Love Raw Cake has catered Nordic House, Vigdis House, the University of Iceland cafe and Idno." } }
+      ]
+    }
+  ]
+}
+</script>
+
 <!--
 =====================================================================
-  RawCakes website — DRAFT v1 (hand-coded single file)
-  Built English-first, mobile-first. Structure ready; assets pending.
-
-  PLACEHOLDERS TO CONFIRM WITH KATYA before publishing:
-   [P1] Brand colours  -> see :root variables, marked /*PLACEHOLDER*/
-   [P2] Logo           -> .logo (text for now; drop in SVG/PNG)
-   [P3] Hero media     -> .hero (photo carousel running now; can swap to video)
-   [P4] Prices         -> search "from 0,000" -> real prices
-   [P5] Exact ingredients per cake -> search data-ingredients (sample only!)
-   [P6] Order channel  -> form + email + phone shown; WhatsApp TBD
-   [P7] Cakes-made count + start year -> .counter (sample number)
-   [P8] Photos         -> all .ph blocks are placeholder image slots
+  RawCakes website — VERSION 2026-08-12
+  • Menu rebuilt to match Katya's own "Ingredients" doc: her exact cake
+    names, real ingredient lists and nutrition (per 100 g) where given.
+  • Real cake photos from Katya's Drive + Telegram; "photo coming soon"
+    where she hasn't shared a shot yet.
+  • Tap any cake -> square note with description, ingredients, nutrition,
+    a swipeable photo gallery, and an Order button.
+  Placeholders still to confirm: [P1]colours [P2]logo [P4]prices
+  [P6]contact/order channel [P7]cakes-made count. Photos to add: the
+  cakes marked "photo coming".
 =====================================================================
 -->
 
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Love Raw Cake — healthy raw cakes, made with love · Reykjavík" />
+<meta property="og:description" content="Vegan, gluten-free raw cakes handmade in Reykjavík from whole, real ingredients. Pleasure without the guilt." />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/logo-32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="images/logo-192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/logo-180.png" />
+  <meta property="og:image" content="https://loverawcake.is/images/chocbanana-2.jpg" />
+<meta property="og:url" content="https://loverawcake.is/" />
+<meta property="og:locale" content="en_GB" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Love Raw Cake — healthy raw cakes, made with love · Reykjavík" />
+<meta name="twitter:description" content="Vegan, gluten-free raw cakes handmade in Reykjavík. Pleasure without the guilt." />
+<meta name="twitter:image" content="https://loverawcake.is/images/chocbanana-2.jpg" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=Neucha&display=swap" rel="stylesheet" />
 
-<style>
-  /* ============ DESIGN TOKENS — swap freely [P1] ============ */
-  :root{
-    --cream:        #F7F2EA; /*PLACEHOLDER bg*/
-    --cream-deep:   #EFE6D6; /*PLACEHOLDER*/
-    --cream-light:  #FDFBF7; /* lighter band to set a section apart */
-    --ink:          #2C2620; /*PLACEHOLDER text*/
-    --ink-soft:     #6B6258;
-    --berry:        #7C4D5B; /*PLACEHOLDER accent*/
-    --berry-deep:   #5E3845;
-    --leaf:         #6E7F5B; /*PLACEHOLDER secondary accent*/
-    --gold:         #C9A66B;
-    --card:         #FFFFFF;
-    --line:         #E3D9C8;
-    --radius:       18px;
-    --radius-lg:    28px;
-    --shadow:       0 10px 30px rgba(44,38,32,.08);
-    --shadow-lg:    0 24px 60px rgba(44,38,32,.14);
-    --maxw:         1120px;
-    --serif:        "Fraunces", Georgia, serif;
-    --sans:         "Inter", system-ui, sans-serif;
-  }
-
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{
-    font-family:var(--sans);
-    color:var(--ink);
-    background:var(--cream);
-    line-height:1.6;
-    -webkit-font-smoothing:antialiased;
-  }
-  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;letter-spacing:-.01em}
-  h2{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:.5em}
-  h3{font-size:1.3rem}
-  p{color:var(--ink-soft)}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%;display:block}
-  section{padding:clamp(2rem,4.5vw,3.75rem) 0}
-  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.1rem,4vw,2rem)}
-  .eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--berry)}
-  .lead{font-size:clamp(1.05rem,2.2vw,1.22rem);color:var(--ink-soft);max-width:46ch}
-
-  /* buttons */
-  .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:1rem;
-    padding:.85rem 1.5rem;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:.25s}
-  .btn-primary{background:var(--berry);color:#fff}
-  .btn-primary:hover{background:var(--berry-deep);transform:translateY(-2px)}
-  .btn-ghost{border-color:var(--ink);color:var(--ink)}
-  .btn-ghost:hover{background:var(--ink);color:var(--cream)}
-
-  /* ============ NAV ============ */
-  header.nav{position:sticky;top:0;z-index:50;background:rgba(247,242,234,.85);
-    backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:68px}
-  .logo{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:.5rem}
-  .logo span{color:var(--berry)} /* [P2] replace whole .logo with image */
-  .nav-links{display:flex;gap:1.6rem;align-items:center}
-  .nav-links a{font-size:.95rem;font-weight:500;color:var(--ink-soft);transition:.2s}
-  .nav-links a:hover{color:var(--berry)}
-  .nav-toggle{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
-  @media(max-width:860px){
-    .nav-links{position:fixed;inset:68px 0 auto 0;flex-direction:column;background:var(--cream);
-      padding:1.2rem 2rem 2rem;gap:1.1rem;border-bottom:1px solid var(--line);transform:translateY(-130%);
-      transition:.35s;align-items:flex-start}
-    .nav-links.open{transform:translateY(0)}
-    .nav-toggle{display:block}
-  }
-
-  /* ============ HERO [P3] ============ */
-  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;color:#fff}
-  .hero-media{position:absolute;inset:0;z-index:0}
-  .hero-media .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease;
-    background-size:cover;background-position:center}
-  .hero-media .slide.active{opacity:1}
-  /* placeholder gradient "photos" — replace background with real images */
-  .slide.s1{background-image:url('images/chocolate-blueberry.jpg')}
-  .slide.s2{background-image:url('images/mango.jpg')}
-  .slide.s3{background-image:url('images/chocolate.jpg')}
-  .hero-media::after{content:"";position:absolute;inset:0;
-    background:linear-gradient(90deg,rgba(20,16,14,.62),rgba(20,16,14,.25));z-index:1}
-  .hero .wrap{position:relative;z-index:2}
-  .hero h1{font-size:clamp(2.5rem,6vw,4.4rem);color:#fff;max-width:16ch;font-weight:500}
-  .hero p{color:rgba(255,255,255,.92);font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:42ch;margin:1.2rem 0 2rem}
-  .hero .btn-ghost{border-color:#fff;color:#fff}
-  .hero .btn-ghost:hover{background:#fff;color:var(--ink)}
-  .hero-note{position:absolute;bottom:1.4rem;right:1.4rem;z-index:2;font-size:.72rem;
-    color:rgba(255,255,255,.6);letter-spacing:.1em;text-transform:uppercase}
-
-  /* ============ INTRO / PARADIGM ============ */
-  .intro{background:var(--cream)}
-  .intro-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(2rem,5vw,4rem);align-items:center}
-  .pillars{display:grid;gap:1rem;margin-top:1.6rem}
-  .pillar{display:flex;gap:.9rem;align-items:flex-start}
-  .pillar .dot{flex:0 0 auto;width:38px;height:38px;border-radius:50%;background:var(--cream-deep);
-    display:grid;place-items:center;font-size:1.1rem}
-  .pillar b{color:var(--ink);font-family:var(--serif);font-weight:600}
-  @media(max-width:760px){.intro-grid{grid-template-columns:1fr}}
-  /* values row (combined story section) */
-  .values{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:clamp(2rem,5vw,3rem)}
-  /* values styled like the Events list: no card, on the page background, purple bullet */
-  .value{background:transparent;border:0;border-radius:0;padding:0;box-shadow:none}
-  .value .dot{width:34px;height:34px;border-radius:50%;background:var(--berry);color:#fff;display:grid;place-items:center;font-size:1.1rem;line-height:1;margin-bottom:.7rem}
-  .value h3{font-size:1.08rem;margin-bottom:.3rem}
-  .value p{font-size:.92rem}
-  @media(max-width:760px){.values{grid-template-columns:1fr}}
-
-  /* image placeholder blocks [P8] */
-  .ph{background:var(--cream-deep);border:1px dashed var(--line);border-radius:var(--radius-lg);
-    display:grid;place-items:center;color:var(--ink-soft);font-size:.85rem;text-align:center;
-    min-height:340px;padding:1rem}
-  .ph small{display:block;opacity:.7;margin-top:.3rem}
-
-  /* ============ MENU ============ */
-  .menu{background:var(--cream-deep)}
-  .tabs{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.4rem 0 2.2rem}
-  .tab{padding:.55rem 1.2rem;border-radius:999px;border:1.5px solid var(--line);background:transparent;
-    cursor:pointer;font-weight:600;font-size:.95rem;color:var(--ink-soft);transition:.2s}
-  .tab.active{background:var(--berry);color:#fff;border-color:var(--berry)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:1.4rem}
-  .card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);
-    transition:.25s;display:flex;flex-direction:column}
-  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
-  .card .pic{aspect-ratio:4/3;background:var(--cream-deep);border-bottom:1px dashed var(--line);
-    display:grid;place-items:center;color:var(--ink-soft);font-size:.8rem;overflow:hidden}
-  .card .pic img{width:100%;height:100%;object-fit:cover} /* fills the 4:3 slot, crops not squashes */
-  .card .body{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;flex:1}
-  .card h3{font-size:1.12rem;margin-bottom:.25rem}
-  .card .desc{font-size:.9rem;flex:1}
-  .badges{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.8rem}
-  .badge{font-size:.66rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;
-    padding:.22rem .5rem;border-radius:6px;background:var(--cream);color:var(--leaf);border:1px solid var(--line)}
-  .badge.nut{color:var(--berry)}
-  .hide{display:none}
-  .menu-note{margin-top:1.8rem;font-size:.9rem;color:var(--ink-soft)}
-
-  /* ============ SPLIT SECTIONS (events / about) ============ */
-  .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
-  .split.rev .txt{order:2}
-  /* my story: top-align the text so the heading sits near the top of the photo, not centered */
-  #about .split{align-items:start}
-  #about .about-photo{align-self:start}   /* level the photo with the heading */
-
-  /* tap the teaser line to expand the rest of the story inline (more / less) */
-  .story-expand{margin-top:1rem;cursor:pointer}
-  .story-expand .more-inline,.story-expand .more-block{display:none}
-  .story-expand .story-toggle,.story-expand .dots{color:var(--berry);font-weight:600}
-  .story-expand:hover .story-toggle{text-decoration:underline}
-  .story-expand .less-label{display:none}
-  .story-expand.open .more-inline{display:inline}
-  .story-expand.open .more-block{display:block;margin-top:1rem}
-  .story-expand.open .dots,.story-expand.open .more-label{display:none}
-  .story-expand.open .less-label{display:inline}
-  /* events: photo still a touch larger, but give the text column room so the heading reads wide */
-  #events .split{grid-template-columns:1fr 1.1fr}
-  @media(max-width:760px){.split,.split.rev,#events .split{grid-template-columns:1fr}.split.rev .txt{order:0}}
-  .about-photo{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow);align-self:end}
-  /* events photo carousel — fade between slides like the hero */
-  .carousel{position:relative;aspect-ratio:1/1;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
-  .carousel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease}
-  .carousel img.active{opacity:1}
-  .carousel .dots{position:absolute;bottom:.8rem;left:50%;transform:translateX(-50%);display:flex;gap:.45rem;z-index:2}
-  .carousel .dots b{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer;transition:.2s}
-  .carousel .dots b.active{background:#fff;transform:scale(1.25)}
-
-  /* ============ COUNTER [P7] ============ */
-  .counter{background:var(--berry);color:#fff;text-align:center}
-  .counter .num{font-family:var(--serif);font-size:clamp(3rem,9vw,5.5rem);font-weight:600;line-height:1}
-  .counter p{color:rgba(255,255,255,.85);margin-top:.4rem}
-
-  /* ============ COURSES ============ */
-  .courses{background:var(--cream-light)}
-  /* phone: in Courses, show the heading/text before its photo */
-  @media(max-width:760px){#courses .txt{order:-1}}
-  .soon{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
-    background:var(--gold);color:#3d2f12;padding:.3rem .7rem;border-radius:999px;margin-bottom:1rem}
-
-  /* ============ ORDER ============ */
-  .order{background:var(--cream-deep)}
-  .order-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,3.5rem)}
-  @media(max-width:760px){.order-grid{grid-template-columns:1fr}}
-  .steps{display:grid;gap:1.1rem;margin-top:1.4rem}
-  .step{display:flex;gap:.9rem;align-items:flex-start}
-  .step .n{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--berry);color:#fff;
-    display:grid;place-items:center;font-weight:600;font-family:var(--serif)}
-  .contact-card{background:var(--card);border-radius:var(--radius-lg);padding:1.8rem;box-shadow:var(--shadow)}
-  .field{margin-bottom:1rem}
-  .field label{display:block;font-size:.85rem;font-weight:600;margin-bottom:.35rem}
-  .field input,.field textarea,.field select{width:100%;padding:.75rem .9rem;border:1.5px solid var(--line);
-    border-radius:12px;font:inherit;background:var(--cream);color:var(--ink)}
-  .field textarea{min-height:96px;resize:vertical}
-  .direct{margin-top:1.2rem;font-size:.92rem;color:var(--ink-soft);display:flex;flex-direction:column;gap:.4rem}
-  .direct a{color:var(--berry);font-weight:600}
-
-  /* ============ FAQ ============ */
-  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.2rem 1.1rem;margin-bottom:.7rem}
-  details summary{cursor:pointer;font-weight:600;padding:.9rem 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
-  details summary::-webkit-details-marker{display:none}
-  details summary::after{content:"+";font-size:1.4rem;color:var(--berry)}
-  details[open] summary::after{content:"–"}
-  details p{padding-bottom:1rem}
-
-  /* ============ FOOTER ============ */
-  footer{background:var(--ink);color:var(--cream);padding:3rem 0 2rem}
-  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem}
-  footer a{color:var(--cream)}
-  footer .muted{color:#9a8f81;font-size:.85rem}
-  .foot-links{display:flex;gap:1.2rem;flex-wrap:wrap}
-
-  .center{text-align:center;margin-inline:auto}
-  .mt{margin-top:1.6rem}
-</style>
+<link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- ============ NAV ============ -->
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="#top" class="logo">Love<span>·</span>Raw·Cake</a> <!-- [P2] -->
+    <a href="#top" class="logo"><img src="images/logo-192.png" alt="" class="logo-mark" />Love<span>·</span>Raw<span>·</span>Cake</a>
     <nav class="nav-links" id="navlinks">
       <a href="#about">My story</a>
       <a href="#cakes">Cakes</a>
-      <a href="#events">For Events</a>
+      <a href="#smallcakes">Small Cakes</a>
+      <a href="#fridaybox">Friday Box</a>
+      <a href="#events">Events</a>
       <a href="#courses">Courses</a>
+      <a href="blog.html">Blog</a>
+            <a class="nav-ig" href="https://instagram.com/love.raw.cake" target="_blank" rel="noopener" aria-label="Love Raw Cake on Instagram" title="@love.raw.cake"><svg viewBox="0 0 24 24" aria-hidden="true"><defs><radialGradient id="igGrad" cx="30%" cy="107%" r="150%"><stop offset="0%" stop-color="#fdf497"/><stop offset="5%" stop-color="#fdf497"/><stop offset="45%" stop-color="#fd5949"/><stop offset="60%" stop-color="#d6249f"/><stop offset="90%" stop-color="#285aeb"/></radialGradient></defs><rect x="1" y="1" width="22" height="22" rx="6.4" fill="url(#igGrad)"/><circle cx="12" cy="12" r="4.6" fill="none" stroke="#fff" stroke-width="1.9"/><circle cx="17.7" cy="6.4" r="1.3" fill="#fff"/></svg></a>
       <a href="#order" class="btn btn-primary" style="padding:.55rem 1.1rem">Order a cake</a>
     </nav>
     <button class="nav-toggle" id="navtoggle" aria-label="Menu">☰</button>
   </div>
 </header>
 
-<!-- ============ HERO [P3] ============ -->
 <section class="hero" id="top">
   <div class="hero-media" id="heroMedia">
     <div class="slide s1 active"></div>
     <div class="slide s2"></div>
     <div class="slide s3"></div>
+    <div class="slide s4"></div>
+    <div class="slide s5"></div>
+    <div class="slide s6"></div>
+    <div class="slide s7"></div>
+    <div class="slide s8"></div>
   </div>
   <div class="wrap">
     <h1>Cake that loves you back.</h1>
@@ -272,10 +117,8 @@
       <a href="#cakes" class="btn btn-ghost">See the cakes</a>
     </div>
   </div>
-  <div class="hero-note">Draft — more photos &amp; video to come</div>
 </section>
 
-<!-- ============ MY STORY (intro + about, combined) ============ -->
 <section id="about">
   <div class="wrap">
     <div class="split rev">
@@ -285,12 +128,12 @@
         <h2>Made by someone who really cares.</h2>
         <p class="lead">My name is Katya. I love people and their stories. I’m a trained raw-cake crafter and I’m training as a coach because I care about both how we treat our bodies and how we treat our minds — they’re connected.</p>
         <div class="story-expand" id="storyExpand" role="button" tabindex="0" aria-expanded="false" aria-label="Read the rest of Katya’s story">
-          <p>My first impulse was to learn to make raw cakes<span class="dots"> …</span> <span class="story-toggle more-label">more</span><span class="more-inline"> for my own and my family’s health. Then I thought of everyone who can’t eat the usual cakes — allergies, sugar, dairy — and wanted them to have a beautiful, healthier choice too. That’s when I realised I wanted to change how cake is seen. For most of us, “cake” means sugar, guilt, something to regret later. I truly believe it can mean the opposite: real nourishment that happens to taste incredible.</span></p>
+          <p>My first impulse was to learn to make raw cakes for my own and my family’s health. Then I thought of everyone who can’t eat the usual cakes — allergies, sugar, dairy — and wanted them to have a beautiful, healthier choice too.<span class="more-inline"> That’s when I realised I wanted to change how cake is seen. For most of us, “cake” means sugar, guilt, something to regret later. I truly believe it can mean the opposite: real nourishment that happens to taste incredible.</span><span class="dots"> …</span> <span class="story-toggle more-label">more</span></p>
           <p class="more-block">Raw Love Cakes are built from good ingredients — and good ingredients are the only way to a good result. That’s what goes into every box: healthy ingredients, care for the person who’ll open it, and no waste behind it — in raw-cake making it’s easy to use every last ingredient, so it’s care twice over: for you and for the planet. <span class="story-toggle less-label">less</span></p>
         </div>
+        <p class="story-blog">If you’d like to learn more about Katya and her cakes, please see the <a href="blog.html">Blog</a>.</p>
       </div>
     </div>
-
     <div class="values">
       <div class="value"><span class="dot">•</span><h3>Whole &amp; real</h3><p>Plant milks I make myself from soaked nuts, cacao butter, fruit and berries — no refined sugar, no flour, no dairy, no eggs.</p></div>
       <div class="value"><span class="dot">•</span><h3>Nothing wasted</h3><p>Even the pulp left from making nut milk goes back into the cake. Made to order, frozen beautifully, never thrown away.</p></div>
@@ -299,94 +142,116 @@
   </div>
 </section>
 
-<!-- ============ MENU ============ -->
 <section class="menu" id="cakes">
   <div class="wrap">
     <span class="eyebrow">Cakes</span>
     <h2>Choose your cake.</h2>
-    <p class="lead">A tight, well-honed selection — each recipe perfected. Whole cakes, or mini-cakes by the plate. <em>(Ingredient lists below are samples — final details to confirm. [P5])</em></p>
+    <p class="lead">Katya’s real range — each one built from whole, raw ingredients. <b>Tap any cake</b> to see it up close, with its full ingredient list and nutrition.</p>
 
     <div class="tabs">
-      <button class="tab active" data-tab="full">Whole cakes</button>
-      <button class="tab" data-tab="mini">Mini-cakes</button>
+      <button class="tab active" data-tab="full">Cakes</button>
+      <button class="tab" data-tab="mini">Small Cakes</button>
+      <button class="tab" data-tab="friday">Friday Box</button>
+      <p class="info-lines">A simple pricing system, for your comfort. <button type="button" class="info-pill" data-open-prices>Prices &amp; Delivery</button></p>
     </div>
 
-    <!-- WHOLE CAKES -->
+    <!-- CAKES & TARTS -->
     <div class="grid" id="grid-full">
-      <!-- card template repeats; descriptions are drafts, ingredients are SAMPLES [P5] -->
-      <article class="card"><div class="pic"><img src="images/chocolate.jpg" alt="Raw chocolate cake" loading="lazy" /></div><div class="body">
-        <h3>Chocolate</h3><p class="desc">Deep, velvety raw chocolate on a nut-cacao base. The classic, done clean.</p>
+      <article class="card" data-cake="chocbanana"><div class="pic"><img src="images/images_20.08.2026/chocbanana_card.jpeg" alt="Raw chocolate banana cake" loading="lazy" /></div><div class="body">
+        <h3>Chocolate Banana</h3><p class="desc">Peanut, banana and raw chocolate — rich, nostalgic and completely plant-based.</p>
+        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Peanut</span></div></div></article>
+
+      <article class="card" data-cake="dubai"><div class="pic"><img src="images/images_20.08.2026/dubai_card.jpeg" alt="Raw Dubai chocolate pistachio cake" loading="lazy" /></div><div class="body">
+        <h3>Dubai Chocolate Cake</h3><p class="desc">The viral Dubai chocolate, made raw — pistachio and cashew with cardamom and cocoa butter.</p>
+        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Pistachio · nuts</span></div></div></article>
+
+      <article class="card" data-cake="macadamia"><div class="pic"><img src="images/images_20.08.2026/macadamia_card.jpeg" alt="Raw macadamia salted caramel cheesecake" loading="lazy" /></div><div class="body">
+        <h3>Macadamia Salted Caramel Cheesecake</h3><p class="desc">Buttery macadamia and fermented cashew cream with date-carob caramel, cocoa nibs and pink salt.</p>
         <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Contains nuts</span></div></div></article>
 
-      <article class="card"><div class="pic"><img src="images/chocolate-blueberry.jpg" alt="Raw chocolate and blueberry cake" loading="lazy" /></div><div class="body">
-        <h3>Chocolate &amp; Blueberry</h3><p class="desc">Rich cacao layered with a bright, tangy blueberry swirl.</p>
+      <article class="card" data-cake="tiramisu"><div class="pic"><img src="images/images_20.08.2026/tiramisu_card.jpeg" alt="Raw tiramisu cake" loading="lazy" /></div><div class="body">
+        <h3>Tiramisu Cake</h3><p class="desc">Fermented cashew cream, chicory “coffee” and cocoa over a date-almond base — the Italian classic, raw.</p>
         <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Contains nuts</span></div></div></article>
 
-      <article class="card"><div class="pic"><img src="images/lemon.jpg" alt="Raw lemon cake" loading="lazy" /></div><div class="body">
-        <h3>Lemon</h3><p class="desc">Zesty, fresh and light — sunshine in a slice.</p>
+
+      <article class="card" data-cake="chochazelnut"><div class="pic"><img src="images/images_20.08.2026/chochazelnut_card.jpeg" alt="Raw chocolate hazelnut tart" loading="lazy" /></div><div class="body">
+        <h3>Chocolate Hazelnut Tart</h3><p class="desc">Cashew and hazelnut with cocoa and coconut — like a raw praline tart.</p>
+        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Hazelnut · nuts</span></div></div></article>
+
+      <article class="card" data-cake="mango"><div class="pic"><img src="images/images_20.08.2026/mango_card.jpeg" alt="Raw mango and passion fruit cake" loading="lazy" /></div><div class="body">
+        <h3>Mango-Passion Fruit Cake</h3><p class="desc">Mango and passion fruit whipped into cashew cream — tropical, silky and vivid.</p>
         <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Contains nuts</span></div></div></article>
 
-      <article class="card"><div class="pic"><img src="images/carrot.jpg" alt="Raw carrot cake" loading="lazy" /></div><div class="body">
-        <h3>Carrot</h3><p class="desc">Warm spice and natural sweetness, the raw way.</p>
+      <article class="card" data-cake="carrot"><div class="pic"><img src="images/images_20.08.2026/carrot_card.jpeg" alt="Raw carrot cake with cashew cream and pecans" loading="lazy" /></div><div class="body">
+        <h3>Carrot Cake</h3><p class="desc">Carrot, fermented cashew cream, pecans, raisins and cinnamon — warm and comforting.</p>
         <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Contains nuts</span></div></div></article>
 
-      <article class="card"><div class="pic"><img src="images/tiramisu.jpg" alt="Raw tiramisu cake" loading="lazy" /></div><div class="body">
-        <h3>Tiramisu</h3><p class="desc">Coffee, cashew cream and cacao — the Italian favourite, reimagined.</p>
+      <article class="card" data-cake="lemon"><div class="pic"><img src="images/images_20.08.2026/lemon_card.jpeg" alt="Raw lemon poppy seed cake" loading="lazy" /></div><div class="body">
+        <h3>Lemon Cake</h3><p class="desc">Bright lemon and poppy seed over a cashew-almond base, with a hint of turmeric.</p>
         <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Contains nuts</span></div></div></article>
 
-      <article class="card"><div class="pic"><img src="images/mango.jpg" alt="Raw mango and passionfruit cake" loading="lazy" /></div><div class="body">
-        <h3>Mango &amp; Passionfruit</h3><p class="desc">Tropical, fragrant and silky — a true summer cake.</p>
+      <article class="card" data-cake="matcha"><div class="pic"><img src="images/images_20.08.2026/matcha_card.jpeg" alt="Raw matcha pineapple cake" loading="lazy" /></div><div class="body">
+        <h3>Matcha Ananas</h3><p class="desc">Pineapple and matcha with pistachio and coconut — vivid, green and refreshing.</p>
+        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Pistachio · nuts</span></div></div></article>
+      <article class="card" data-cake="chocblue"><div class="pic"><img src="images/images_20.08.2026/chocblue_card.jpeg" alt="Raw blueberry chocolate cheesecake with blueberries and chocolate drizzle" loading="lazy" /></div><div class="body">
+        <h3>Blueberry Chocolate Cheesecake</h3><p class="desc">Cocoa and blueberry over hazelnut-milk cashew cream with cocoa nibs.</p>
         <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Contains nuts</span></div></div></article>
 
-      <article class="card"><div class="pic"><img src="images/macadamia.avif" alt="Raw macadamia salted caramel cake" loading="lazy" /></div><div class="body">
-        <h3>Macadamia Salted Caramel</h3><p class="desc">Buttery macadamia and deep date caramel with a hit of sea salt.</p>
-        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Contains nuts</span></div></div></article>
 
-      <article class="card"><div class="pic"><img src="images/matcha.jpg" alt="Raw matcha and pineapple cake" loading="lazy" /></div><div class="body">
-        <h3>Matcha &amp; Pineapple</h3><p class="desc">Earthy matcha meets bright pineapple — vivid and refreshing.</p>
-        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Contains nuts</span></div></div></article>
-
-      <article class="card"><div class="pic"><img src="images/small-cakes.png" alt="Assortment of raw small cakes" loading="lazy" /></div><div class="body">
-        <h3>Small Cakes</h3><p class="desc">Love more than one? Any cake can be made as a small piece — perfect for sharing, events, or tasting several flavours at once. By the plate.</p>
-        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Contains nuts</span></div></div></article>
+      <article class="card smallcakes-card" data-goto-tab="mini" role="button" tabindex="0"><div class="pic"><img src="images/images_20.08.2026/smallcakes_buffet_web.jpeg" alt="Raw mini-cakes plated on a buffet table" loading="lazy" /></div><div class="body">
+        <h3>Small Cakes</h3><p class="desc">Individual portions by the plate — matcha ananas, blackcurrant banana and salted peanut balls. Made for events and sharing.</p>
+        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span></div>
+        <p class="desc smallcakes-cta"><b>See all small cakes →</b></p></div></article>
+      <article class="card smallcakes-card" data-goto-tab="friday" role="button" tabindex="0"><div class="pic"><img src="images/images_20.08.2026/fridaybox_card.jpeg" alt="A Friday Box of four raw mini-cakes" loading="lazy" /></div><div class="body">
+        <h3>Friday Box</h3><p class="desc">[Copy from Katya — what is in the box, how many pieces, and the price.]</p>
+        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span></div>
+        <p class="desc smallcakes-cta"><b>See the Friday Box →</b></p></div></article>
     </div>
 
-    <!-- MINI CAKES -->
+    <!-- SMALL CAKES -->
     <div class="grid hide" id="grid-mini">
-      <article class="card"><div class="pic">Photo [P8]</div><div class="body">
-        <h3>Strawberry &amp; Almond</h3><p class="desc">Light almond base, fresh strawberry — gentle, and our least nut-heavy option.</p>
-        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Almond</span></div></div></article>
+      <div class="mini-strip">
+        <div class="shots">
+          <img src="images/images_20.08.2026/smallcakes_fingers_web.jpeg" alt="A board of raw mini-cakes with berries" loading="lazy" />
+          <img src="images/images_20.08.2026/smallcakes_main_web.jpeg" alt="Board of raw mini-cakes with berries" loading="lazy" />
+          <img src="images/images_20.08.2026/smallcakes_square1_web.jpeg" alt="Raw mini-cakes with strawberries on plates" loading="lazy" />
+          <img src="images/images_20.08.2026/smallcakes_buffet_web.jpeg" alt="Raw mini-cakes plated on a buffet table at an event" loading="lazy" />
+        </div>
+        <p>Small cakes are made by the plate — mix and match any of the flavours below. Platters from 6 pieces.</p>
+      </div>
 
-      <article class="card"><div class="pic">Photo [P8]</div><div class="body">
-        <h3>Chocolate Banana Peanut</h3><p class="desc">The American classic — chocolate, banana and peanut. Crowd favourite.</p>
-        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Peanut</span></div></div></article>
 
-      <article class="card"><div class="pic"><img src="images/matcha.jpg" alt="Raw matcha and pineapple mini-cake" loading="lazy" /></div><div class="body">
-        <h3>Matcha &amp; Pineapple</h3><p class="desc">The same vivid pairing in a perfect single-serve cloud.</p>
+      <article class="card" data-cake="matchasmall"><div class="pic"><img src="images/images_20.08.2026/matchasmall_card.jpeg" alt="Raw matcha ananas mini-cakes with edible flowers" loading="lazy" /></div><div class="body">
+        <h3>Matcha Ananas</h3><p class="desc">Pineapple and matcha with pistachio and coconut — vivid, green and refreshing.</p>
+        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Pistachio · nuts</span></div></div></article>
+      <article class="card" data-cake="blackcurrant"><div class="pic"><img src="images/images_20.08.2026/blackcurrant_card.jpeg" alt="Raw blackcurrant banana mini-cakes with chocolate drizzle" loading="lazy" /></div><div class="body">
+        <h3>Blackcurrant Banana</h3><p class="desc">Blackcurrant and banana with cashew, almond and green buckwheat.</p>
         <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Contains nuts</span></div></div></article>
 
-      <article class="card"><div class="pic"><img src="images/mango.jpg" alt="Raw mango and passionfruit mini-cake" loading="lazy" /></div><div class="body">
-        <h3>Mango &amp; Passionfruit</h3><p class="desc">Tropical and silky, by the bite.</p>
-        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Contains nuts</span></div></div></article>
-
-      <article class="card"><div class="pic">Photo [P8]</div><div class="body">
-        <h3>White Snickers Peanut</h3><p class="desc">Caramel, peanut and a creamy white layer — indulgent, clean ingredients.</p>
+      <article class="card" data-cake="peanutball"><div class="pic"><img src="images/images_20.08.2026/peanutball_card.jpeg" alt="Salted peanut ball dessert with pistachio and physalis" loading="lazy" /></div><div class="body">
+        <h3>Salted Peanut Ball</h3><p class="desc">Marzipan biscuit base, coconut mousse and peanut filling under crisp white chocolate.</p>
         <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge nut">Peanut</span></div></div></article>
     </div>
 
-    <p class="menu-note">🕒 Most cakes need <b>1–3 days’ notice</b> (some, like fermented-cashew recipes, need 24h to ferment; a few can be ready next day). Whole cakes from <b>1</b>; mini-cakes by the plate <b>from 6</b>. Pricing <b>from 0,000 ISK</b> — <em>[P4 confirm]</em>.</p>
+    <div class="grid hide" id="grid-friday">
+      <article class="card" id="fridaybox" data-cake="fridaybox"><div class="pic"><img src="images/images_20.08.2026/fridaybox_card.jpeg" alt="A Friday Box of four raw mini-cakes" loading="lazy" /></div><div class="body">
+        <h3>Friday Box</h3><p class="desc">[Copy from Katya — what is in the box, how many pieces, and the price.]</p>
+        <div class="badges"><span class="badge">Vegan</span><span class="badge">Gluten-free</span><span class="badge tag">Allergens to confirm</span></div></div></article>
+    </div>
+
+
+    <p class="menu-note">🕒 Most cakes need <b>1–3 days’ notice</b> (some, like fermented-cashew recipes, need 24h to ferment). Whole cakes, or small cakes by the plate. <button type="button" class="info-pill" data-open-prices>Prices &amp; Delivery</button></p>
   </div>
 </section>
 
-<!-- ============ COUNTER [P7] ============ -->
 <section class="counter">
   <div class="wrap">
     <div class="num" id="cakeCount">0</div>
-    <p>cakes made with love since 2020 — and counting <em>(sample number [P7])</em></p>
+    <!-- PLACEHOLDER: 842 is an invented figure. Ask Katya for the real count before launch. -->
+    <p>cakes made with love since 2020 — and counting</p>
   </div>
 </section>
 
-<!-- ============ EVENTS ============ -->
 <section id="events">
   <div class="wrap split">
     <div class="txt">
@@ -398,18 +263,19 @@
         <div class="step"><span class="n">•</span><p>Platters from 6 pieces; larger orders from ~50 pieces</p></div>
         <div class="step"><span class="n">•</span><p>Trusted by <b>Nordic House</b>, <b>Vigdís House</b>, the <b>University of Iceland</b> café and <b>Iðnó</b></p></div>
       </div>
-      <a href="#order" class="btn btn-primary mt">Plan an event order</a>
+      <a href="#order" class="btn btn-primary mt" data-order="Event / large order">Plan an event order</a>
     </div>
     <div class="carousel" id="eventCarousel">
-      <img class="active" src="images/event-1.jpg" alt="Raw cake platter at an event" loading="lazy" />
-      <img src="images/event-2.jpg" alt="Mini-cakes spread for a reception" loading="lazy" />
-      <img src="images/event-3.jpg" alt="Finger-food raw cakes for a gathering" loading="lazy" />
+      <img class="active" src="images/event-p1.jpg" alt="Raw dessert platter and mini-cakes at an event" loading="lazy" />
+      <img src="images/event-p2.jpg" alt="Mini raw cakes on wooden boards for a reception" loading="lazy" />
+      <img src="images/event-p3.jpg" alt="Finger-food raw desserts spread for a gathering" loading="lazy" />
+      <img src="images/event-p4.jpg" alt="Chocolate-dipped strawberries and treats on a platter" loading="lazy" />
+      <img src="images/event-p5.jpg" alt="Raw mini-cakes and chocolate treats catering spread" loading="lazy" />
       <div class="dots"></div>
     </div>
   </div>
 </section>
 
-<!-- ============ COURSES ============ -->
 <section class="courses" id="courses">
   <div class="wrap">
     <div class="split rev">
@@ -418,13 +284,27 @@
         <span class="eyebrow">Courses</span>
         <h2>Learn to make them yourself.</h2>
         <p class="lead">I love passing on what I know. Raw cakes are simpler than they look — and there’s real joy in making something this good with your own hands. Courses are on the way. Want first access?</p>
-        <a href="#order" class="btn btn-ghost mt">Join the course waitlist</a>
+        <a href="#order" class="btn btn-ghost mt" data-order="Course — join the waitlist">Join the course waitlist</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ ORDER [P6] ============ -->
+<section id="reviews">
+  <div class="wrap">
+    <span class="eyebrow">Kind words</span>
+    <h2>Loved by customers since 2020.</h2>
+    <p class="lead">Real words from real people.</p>
+    <!-- PLACEHOLDER: names and quotes below are stand-ins. Replace with Katya's real reviews before the site goes live. -->
+    <div class="quotes">
+      <figure class="quote"><div class="stars">★★★★★</div><p>“The most beautiful cake I’ve ever ordered — and somehow it’s actually good for you. My guests couldn’t believe it was vegan.”</p><figcaption class="who">— Elín G., Reykjavík</figcaption></figure>
+      <figure class="quote"><div class="stars">★★★★★</div><p>“Katya made a gluten-free birthday cake my daughter could finally eat. It made her day.”</p><figcaption class="who">— Sigrún H., birthday order</figcaption></figure>
+      <figure class="quote"><div class="stars">★★★★★</div><p>“Ordered for our office and the vegan team felt so thought of. We’ll absolutely order again.”</p><figcaption class="who">— Anna Katrín B., corporate event</figcaption></figure>
+    </div>
+    <p class="menu-note">⭐ Ordered before? Leaving a review on Google helps more people find healthy cake — thank you.</p>
+  </div>
+</section>
+
 <section class="order" id="order">
   <div class="wrap">
     <span class="eyebrow">How to order</span>
@@ -437,22 +317,27 @@
           <div class="step"><span class="n">2</span><p><b>I confirm</b> availability, details and price.</p></div>
           <div class="step"><span class="n">3</span><p><b>Pick up or delivery</b> — and enjoy.</p></div>
         </div>
+        <p class="info-lines">A simple pricing system, for your comfort. <button type="button" class="info-pill" data-open-prices>Prices &amp; Delivery</button></p>
         <div class="direct">
           <span>Prefer to message directly?</span>
-          <a href="mailto:hello@loverawcake.is">✉︎ hello@loverawcake.is <em>[P6 confirm]</em></a>
-          <a href="tel:+3540000000">✆ +354 000 0000 <em>[P6 confirm]</em></a>
+          <!-- email + phone removed 26 Aug: ask Katya how she wants people to reach her (see TASKS.md [P6]) -->
           <a href="https://instagram.com/love.raw.cake" target="_blank" rel="noopener">⌾ @love.raw.cake</a>
         </div>
       </div>
-
       <form class="contact-card" onsubmit="event.preventDefault();alert('Demo form — wiring to email/Formspree comes next [P6].');">
         <div class="field"><label>Your name</label><input type="text" required placeholder="Name" /></div>
         <div class="field"><label>Best way to reach you</label><input type="text" required placeholder="Email or phone" /></div>
         <div class="field"><label>Which cake?</label>
-          <select><option>Chocolate</option><option>Chocolate &amp; Blueberry</option><option>Lemon</option>
-          <option>Carrot</option><option>Tiramisu</option><option>Mango &amp; Passionfruit</option>
-          <option>Macadamia Salted Caramel</option><option>Matcha &amp; Pineapple</option>
-          <option>Mini-cakes platter</option><option>Event / large order</option><option>Not sure — help me choose</option></select></div>
+          <select id="orderSelect">
+            <option>Chocolate Banana</option><option>Dubai Chocolate Cake</option>
+            <option>Macadamia Salted Caramel Cheesecake</option><option>Tiramisu Cake</option>
+            <option>Chocolate Hazelnut Tart</option>
+            <option>Mango-Passion Fruit Cake</option><option>Carrot Cake</option>
+            <option>Lemon Cake</option><option>Raspberry Cake</option><option>Strawberry Cake</option>
+            <option>Matcha Ananas (small)</option><option>Strawberry with Almond (small)</option>
+            <option>Blackcurrant Banana (small)</option><option>Salted Peanut Ball (small)</option>
+            <option>Small-cakes platter</option><option>Event / large order</option><option>Course — join the waitlist</option><option>Not sure — help me choose</option>
+          </select></div>
         <div class="field"><label>When do you need it?</label><input type="date" /></div>
         <div class="field"><label>Anything else?</label><textarea placeholder="Number of cakes, allergies, occasion…"></textarea></div>
         <button class="btn btn-primary" style="width:100%">Send my request</button>
@@ -461,85 +346,88 @@
   </div>
 </section>
 
-<!-- ============ FAQ ============ -->
 <section id="faq">
   <div class="wrap" style="max-width:760px">
     <span class="eyebrow">Good to know</span>
     <h2>Questions, answered.</h2>
     <div class="mt">
       <details open><summary>Are the cakes really healthy?</summary><p>Yes — they’re built from whole, real ingredients: home-made plant milks, nuts, fruit, berries, cacao and coconut butter. No refined sugar, no flour, no dairy, no eggs. Naturally vegan and gluten-free.</p></details>
-      <details><summary>Do you cater to nut allergies?</summary><p>Honestly, no — nuts are a core ingredient in almost everything I make, so if you have a serious nut allergy these cakes aren’t safe for you, and I’d never want to risk it. <em>(Final wording to confirm with Katya. [P5])</em></p></details>
+      <details><summary>Do you cater to nut allergies?</summary><p>Honestly, no — nuts are a core ingredient in almost everything I make, so if you have a serious nut allergy these cakes aren’t safe for you, and I’d never want to risk it.</p></details>
       <details><summary>How much notice do you need?</summary><p>Usually 1–3 days. Some recipes ferment for 24 hours; a few can be ready the next day. For events, the more notice the better.</p></details>
-      <details><summary>How do I pay and collect?</summary><p>We sort the details when you get in touch — pickup or delivery, and payment by invoice/transfer. <em>(To confirm. [P6])</em></p></details>
+      <details><summary>How do I pay and collect?</summary><p>Pickup or delivery — the delivery costs are in <button type="button" class="link-btn" data-open-prices>Prices &amp; Delivery</button> above. We agree the day, the time and how you’d like to pay when you get in touch.<!-- payment method still to confirm with Katya — see TASKS.md [P6] --></p></details>
       <details><summary>Can I order for a company or event?</summary><p>Absolutely — see the <a href="#events">events section</a>. Finger-food minis, platters, and larger orders from ~50 pieces.</p></details>
     </div>
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
 <footer>
   <div class="wrap foot-grid">
     <div>
-      <div class="logo" style="color:var(--cream)">Love<span style="color:var(--gold)">·</span>Raw·Cake</div>
+      <div class="logo on-dark" style="color:var(--cream)">Love<span>·</span>Raw<span>·</span>Cake</div>
       <p class="muted" style="margin-top:.6rem;max-width:30ch">Healthy raw cakes, handmade with love in Reykjavík.</p>
     </div>
     <div class="foot-links">
-      <a href="#cakes">Cakes</a><a href="#events">Events</a><a href="#courses">Courses</a>
-      <a href="#about">About</a><a href="#order">Order</a>
+      <a href="#about">My story</a>
+      <a href="#cakes">Cakes</a>
+      <a href="#smallcakes">Small Cakes</a>
+      <a href="#fridaybox">Friday Box</a>
+      <a href="#events">Events</a>
+      <a href="#courses">Courses</a>
+      <a href="blog.html">Blog</a>
       <a href="https://instagram.com/love.raw.cake" target="_blank" rel="noopener">Instagram</a>
+      <a href="#order">Order a cake</a>
     </div>
+    <img class="foot-mark" src="images/logo.svg" alt="Love Raw Cake logo" />
   </div>
-  <div class="wrap" style="margin-top:2rem"><p class="muted">© <span id="yr"></span> Love Raw Cake · Reykjavík, Iceland · Draft site</p></div>
+  <div class="wrap" style="margin-top:2rem"><p class="muted">© <span id="yr"></span> Love Raw Cake · Reykjavík, Iceland · Draft site · v2026-08-26</p></div>
 </footer>
 
-<script>
-  // mobile nav
-  const tgl=document.getElementById('navtoggle'),links=document.getElementById('navlinks');
-  tgl.addEventListener('click',()=>links.classList.toggle('open'));
-  links.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>links.classList.remove('open')));
+<div class="modal" id="priceModal" aria-hidden="true">
+  <div class="modal-backdrop" data-info-close></div>
+  <div class="note" role="dialog" aria-modal="true" aria-labelledby="priceTitle">
+    <button class="note-close" data-info-close aria-label="Close">×</button>
+    <div class="note-body">
+      <span class="eyebrow">Prices &amp; Delivery</span>
+      <h3 id="priceTitle">Simple pricing, by weight.</h3>
+      <ul class="price-list">
+        <li><b>Cakes — from 1,100 ISK per 100 g.</b> A whole cake is usually 800–1,200 g.</li>
+        <li><b>Small cakes — S / M / L</b> (30 g · 50 g · 100 g). Minimum order 600 g of one kind.</li>
+        <li><b>Writing on the cake — from 1,500 ISK.</b></li>
+      </ul>
+      <p class="note-nutr">Prices may change if the cost of ingredients rises at the time of your order.</p>
+      <h4>Delivery</h4>
+      <ul class="price-list">
+        <li><b>Free</b> in the Reykjavík capital area on orders of <b>15,000 ISK and over</b>.</li>
+        <li>Otherwise, delivery is <b>from 2,000 ISK</b>, depending on where you are.</li>
+      </ul>
+      <a href="#order" class="btn btn-primary note-order" data-info-close>Order a cake →</a>
+    </div>
+  </div>
+</div>
 
-  // menu tabs
-  document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
-    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
-    t.classList.add('active');
-    const tab=t.dataset.tab;
-    document.getElementById('grid-full').classList.toggle('hide',tab!=='full');
-    document.getElementById('grid-mini').classList.toggle('hide',tab!=='mini');
-  }));
+<div class="modal" id="cakeModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="note" role="dialog" aria-modal="true" aria-labelledby="noteTitle">
+    <button class="note-close" data-close aria-label="Close">×</button>
+    <div class="gallery">
+      <div class="gal-track" id="galTrack"></div>
+      <span class="gal-cap" id="galCap"></span>
+      <button class="gal-arrow prev" id="galPrev" aria-label="Previous photo">‹</button>
+      <button class="gal-arrow next" id="galNext" aria-label="Next photo">›</button>
+      <div class="gal-dots" id="galDots"></div>
+    </div>
+    <div class="note-body">
+      <p class="note-photo">The photos show how this cake usually comes out. Every cake is made by hand, so decoration varies with the season and what I have that week — yours may look a little different.</p>
+      <h3 id="noteTitle"></h3>
+      <p class="note-desc" id="noteDesc"></p>
+      <div class="badges" id="noteBadges"></div>
+      <p class="note-ing" id="noteIng"></p>
+      <p class="note-nutr" id="noteNutr"></p>
+      <a href="#order" class="btn btn-primary note-order" id="noteOrder">Order this cake →</a>
+    </div>
+  </div>
+</div>
 
-  // hero carousel [P3] — swap .slide backgrounds for real photos, or replace block with <video>
-  const slides=[...document.querySelectorAll('.hero-media .slide')];let i=0;
-  setInterval(()=>{slides[i].classList.remove('active');i=(i+1)%slides.length;slides[i].classList.add('active');},4500);
-
-  // events photo carousel — fades through event-1/2/3, with clickable dots
-  (function(){
-    const car=document.getElementById('eventCarousel');if(!car)return;
-    const imgs=[...car.querySelectorAll('img')],dotsWrap=car.querySelector('.dots');let e=0,timer;
-    imgs.forEach((_,idx)=>{const d=document.createElement('b');if(idx===0)d.classList.add('active');
-      d.addEventListener('click',()=>{show(idx);reset();});dotsWrap.appendChild(d);});
-    const dots=[...dotsWrap.children];
-    function show(idx){imgs[e].classList.remove('active');dots[e].classList.remove('active');
-      e=idx;imgs[e].classList.add('active');dots[e].classList.add('active');}
-    function next(){show((e+1)%imgs.length);}
-    function reset(){clearInterval(timer);timer=setInterval(next,4000);}
-    reset();
-  })();
-
-  // counter [P7] — replace target with real number from Katya's records
-  const target=842, el=document.getElementById('cakeCount');let n=0;
-  const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
-    const step=Math.ceil(target/60);const t=setInterval(()=>{n+=step;if(n>=target){n=target;clearInterval(t);}el.textContent=n.toLocaleString();},24);
-    io.disconnect();}});});io.observe(document.querySelector('.counter'));
-
-  document.getElementById('yr').textContent=new Date().getFullYear();
-
-  // tap the story teaser to expand/collapse the rest inline (no "read more" button)
-  const se=document.getElementById('storyExpand');
-  if(se){
-    const toggle=()=>{const o=se.classList.toggle('open');se.setAttribute('aria-expanded',o);};
-    se.addEventListener('click',toggle);
-    se.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle();}});
-  }
-</script>
+<script src="site.js"></script>
 </body>
 </html>

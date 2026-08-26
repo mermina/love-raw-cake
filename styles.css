@@ -1,0 +1,271 @@
+/* Love Raw Cake — shared styles.
+   Used by index_2026-08-23.html and blog.html. Edit once, both pages update. */
+
+  :root{
+    --cream:#F7F2EA; --cream-deep:#EFE6D6; --cream-light:#FDFBF7;
+    --ink:#2C2620; --ink-soft:#6B6258; --berry:#7C4D5B; --berry-deep:#5E3845;
+    --leaf:#6E7F5B; --gold:#C9A66B; --card:#FFFFFF; --line:#E3D9C8;
+    --radius:18px; --radius-lg:28px;
+    --shadow:0 10px 30px rgba(44,38,32,.08); --shadow-lg:0 24px 60px rgba(44,38,32,.14);
+    --maxw:1120px; --serif:"Fraunces",Georgia,serif; --sans:"Inter",system-ui,sans-serif; --hand:"Neucha","Bradley Hand","Segoe Script",cursive;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;letter-spacing:-.01em}
+  h2{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:.5em}
+  h3{font-size:1.3rem}
+  p{color:var(--ink-soft)}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  section{padding:clamp(2rem,4.5vw,3.75rem) 0}
+  .wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(1.1rem,4vw,2rem)}
+  .eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--berry)}
+  .lead{font-size:clamp(1.05rem,2.2vw,1.22rem);color:var(--ink-soft);max-width:46ch}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;font-size:1rem;padding:.85rem 1.5rem;border-radius:999px;border:1.5px solid transparent;cursor:pointer;transition:.25s}
+  .btn-primary{background:var(--berry);color:#fff}
+  .btn-primary:hover{background:var(--berry-deep);transform:translateY(-2px)}
+  .btn-ghost{border-color:var(--ink);color:var(--ink)}
+  .btn-ghost:hover{background:var(--ink);color:var(--cream)}
+
+  header.nav{position:sticky;top:0;z-index:50;background:rgba(247,242,234,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:92px;max-width:1220px}
+  /* brand mark — bottom-right of the footer */
+  .foot-mark{height:76px;width:76px;align-self:flex-end;margin-left:auto}
+  .logo{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:var(--ink);display:flex;align-items:center;gap:0}
+  .logo span{margin:0 .1em;color:var(--berry)}
+  .logo.on-dark span{color:var(--gold)}
+  .nav-links{display:flex;gap:1.4rem;align-items:center}
+  /* .nav-links a sets ink-soft on every nav link, so the CTA needs an equally
+     specific rule to keep its white label */
+  .nav-links .btn-primary,.nav-links .btn-primary:hover{color:#fff}
+  .nav-links .btn-primary{margin-left:.5rem}
+  .nav-links .nav-ig{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;margin-left:.15rem}
+  .nav-links .nav-ig:hover svg{transform:scale(1.12);box-shadow:0 3px 9px rgba(0,0,0,.22)}
+  .nav-ig svg{width:27px;height:27px;display:block;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.16);transition:transform .2s,box-shadow .2s}
+  .nav-links a{font-size:.95rem;font-weight:500;color:var(--ink-soft);transition:.2s}
+  .nav-links a:hover{color:var(--berry)}
+  .nav-toggle{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
+  @media(max-width:1060px){
+    .nav-links{position:fixed;inset:92px 0 auto 0;flex-direction:column;background:var(--cream);padding:1.2rem 2rem 2rem;gap:1.1rem;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:.35s;align-items:flex-start}
+    .nav-links.open{transform:translateY(0)}
+    .nav-toggle{display:block}
+  }
+
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;color:#fff}
+  .hero-media{position:absolute;inset:0;z-index:0}
+  .hero-media .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.4s ease;background-size:cover;background-position:center}
+  .hero-media .slide.active{opacity:1}
+  .slide.s1{background-image:url('images/images_20.08.2026/chocbanana_hero.jpeg');background-position:center 64%}
+  .slide.s2{background-image:url('images/images_20.08.2026/dubai_hero.jpeg');background-position:center 62%}
+  .slide.s3{background-image:url('images/images_20.08.2026/chochazelnut_hero.jpeg');background-position:center 56%}
+  .slide.s4{background-image:url('images/images_20.08.2026/carrot_hero.jpeg');background-position:center 22%}
+  .slide.s5{background-image:url('images/images_20.08.2026/lemon_hero.jpeg');background-position:center 55%}
+  .slide.s6{background-image:url('images/images_20.08.2026/tiramisu_hero.jpeg');background-position:center 58%}
+  .slide.s7{background-image:url('images/images_20.08.2026/macadamia_hero.jpeg');background-position:center 55%}
+  .slide.s8{background-image:url('images/images_20.08.2026/matcha_hero.jpeg');background-position:center 68%}
+  /* soft scrim on the left only — the type stays readable and the cake keeps its own colour */
+  .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,16,14,.45) 0%,rgba(20,16,14,.16) 45%,rgba(20,16,14,0) 72%);z-index:1}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.5rem,6vw,4.4rem);color:#fff;max-width:16ch;font-weight:500;text-shadow:0 2px 18px rgba(20,16,14,.55)}
+  .hero .wrap>p{text-shadow:0 1px 12px rgba(20,16,14,.6)}
+  .hero p{color:rgba(255,255,255,.92);font-size:clamp(1.05rem,2.4vw,1.3rem);max-width:42ch;margin:1.2rem 0 2rem}
+  .hero .btn-ghost{border-color:#fff;color:#fff}
+  .hero .btn-ghost:hover{background:#fff;color:var(--ink)}
+  .hero-note{position:absolute;bottom:1.4rem;right:1.4rem;z-index:2;font-size:.72rem;color:rgba(255,255,255,.6);letter-spacing:.1em;text-transform:uppercase}
+
+  .values{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:clamp(1rem,2vw,1.5rem)}
+  .value{background:transparent;border:0;padding:0;box-shadow:none;display:grid;grid-template-columns:30px 1fr;column-gap:.6rem;align-items:center}
+  .value .dot{width:30px;height:30px;border-radius:50%;background:var(--berry);color:#fff;display:grid;place-items:center;font-size:1rem;line-height:1}
+  .value h3{font-size:1.08rem;margin-bottom:0}
+  .value p{font-size:.92rem;grid-column:1/-1;margin-top:.5rem}
+  @media(max-width:760px){.values{grid-template-columns:1fr}}
+
+  .menu{background:var(--cream-deep)}
+  .tabs{display:flex;gap:.5rem;flex-wrap:wrap;align-items:center;margin:1.4rem 0 2.2rem}
+  /* the prices line rides on the right of the tab row, and drops below it when there is no room */
+  .tabs .info-lines{margin:0 0 0 auto}
+  .tab{padding:.55rem 1.2rem;border-radius:999px;border:1.5px solid var(--line);background:transparent;cursor:pointer;font-weight:600;font-size:.95rem;color:var(--ink-soft);transition:.2s}
+  .tab.active{background:var(--berry);color:#fff;border-color:var(--berry)}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:1.4rem}
+  /* photo strip heading the Small cakes tab — spans the whole grid row */
+  .mini-strip{grid-column:1/-1;margin-bottom:.2rem}
+  .mini-strip .shots{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1rem}
+  .mini-strip img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow);display:block}
+  .mini-strip p{font-size:.92rem;color:var(--ink-soft);margin-top:.75rem}
+  .card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.25s;display:flex;flex-direction:column}
+  .card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+  .card .pic{position:relative;aspect-ratio:4/3;background:var(--cream-deep);border-bottom:1px dashed var(--line);display:grid;place-items:center;color:var(--ink-soft);font-size:.8rem;overflow:hidden}
+  .card .pic img{width:100%;height:100%;object-fit:cover;align-self:stretch;justify-self:stretch;min-height:0;object-position:center 60%}
+  .card .pic.noimg{background:linear-gradient(135deg,var(--cream) 0%,var(--cream-deep) 100%);font-style:italic;letter-spacing:.02em}
+  /* every card photo is 4:3, same as the frame, so object-position can't crop.
+     the matcha cake sits low in its own shot — zoom in a little and pull it up */
+  .card[data-cake="matcha"] .pic img{transform:scale(1.18) translateY(-6.5%)}
+  .card .body{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;flex:1}
+  .card h3{font-size:1.12rem;margin-bottom:.25rem}
+  .card .desc{font-size:.9rem;flex:1}
+  .badges{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.8rem}
+  .badge{font-size:.66rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:.22rem .5rem;border-radius:6px;background:var(--cream);color:var(--leaf);border:1px solid var(--line)}
+  .badge.nut{color:var(--berry)}
+  .badge.tag{color:var(--gold);border-color:var(--gold)}
+  .hide{display:none}
+  .menu-note{margin-top:1.8rem;font-size:.9rem;color:var(--ink-soft)}
+  /* prices: a pill beside the tabs and a plain-language line above them, both
+     opening the same note — prices are per weight, so they belong in one place
+     rather than repeated on every cake card */
+  .info-lines{margin-top:1.1rem;font-size:.97rem;color:var(--ink-soft);display:flex;align-items:center;gap:.7rem;flex-wrap:wrap}
+  .info-pill{padding:.5rem 1.15rem;border-radius:999px;border:1.5px solid var(--berry);background:transparent;cursor:pointer;font-weight:600;font-size:.92rem;color:var(--berry);transition:.2s}
+  .info-pill:hover{background:var(--berry);color:#fff}
+  .price-list{list-style:none;margin:.4rem 0 0;padding:0}
+  .price-list li{position:relative;padding-left:1.1rem;margin-bottom:.6rem;font-size:.95rem;color:var(--ink-soft);line-height:1.55}
+  .price-list li:before{content:"•";position:absolute;left:0;color:var(--berry);font-weight:700}
+  .price-list b{color:var(--ink)}
+  #priceModal h4{font-family:var(--serif);font-size:1.05rem;margin:1.1rem 0 .1rem}
+  .note-photo{font-size:.85rem;color:var(--ink-soft);line-height:1.5;margin-bottom:.9rem;padding-bottom:.8rem;border-bottom:1px dashed var(--line)}
+
+  .card.clickable{cursor:pointer}
+  .card.clickable:focus-visible{outline:3px solid var(--berry);outline-offset:2px}
+  .card .view-hint{position:absolute;right:.6rem;bottom:.6rem;z-index:2;display:flex;align-items:center;gap:.3rem;background:rgba(255,255,255,.92);color:var(--berry);font-size:.7rem;font-weight:700;padding:.28rem .6rem;border-radius:999px;box-shadow:var(--shadow);opacity:0;transform:translateY(4px);transition:.22s}
+  .card.clickable:hover .view-hint,.card.clickable:focus-visible .view-hint{opacity:1;transform:translateY(0)}
+  @media(hover:none){.card .view-hint{opacity:1;transform:none}}
+
+  .modal{position:fixed;inset:0;z-index:100;display:none}
+  .modal.open{display:block}
+  .modal-backdrop{position:absolute;inset:0;background:rgba(20,16,14,.55);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+  .note{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.96);opacity:0;width:min(93vw,460px);max-height:93vh;overflow-y:auto;background:var(--card);border-radius:24px;box-shadow:var(--shadow-lg);transition:transform .28s ease,opacity .28s ease}
+  .modal.open .note{transform:translate(-50%,-50%) scale(1);opacity:1}
+  .note-close{position:absolute;top:.55rem;right:.6rem;z-index:6;width:34px;height:34px;border-radius:50%;border:0;background:rgba(255,255,255,.9);font-size:1.35rem;line-height:1;cursor:pointer;color:var(--ink);box-shadow:var(--shadow)}
+  .note-close:hover{background:#fff}
+  .gallery{position:relative;aspect-ratio:1/1;background:var(--cream-deep);overflow:hidden;border-radius:24px 24px 0 0}
+  .gal-track{display:flex;height:100%;transition:transform .35s ease;touch-action:pan-y}
+  .g-slide{min-width:100%;height:100%}
+  .g-slide img{width:100%;height:100%;object-fit:cover}
+  .gal-arrow{position:absolute;top:50%;transform:translateY(-50%);width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.82);cursor:pointer;font-size:1.3rem;color:var(--ink);display:grid;place-items:center;z-index:3;box-shadow:var(--shadow)}
+  .gal-arrow.prev{left:.6rem}.gal-arrow.next{right:.6rem}
+  .gal-arrow:hover{background:#fff}
+  .gal-cap{position:absolute;top:.65rem;left:.7rem;z-index:3;font-size:.7rem;font-weight:600;background:rgba(20,16,14,.5);color:#fff;padding:.24rem .6rem;border-radius:999px}
+  .gal-dots{position:absolute;bottom:.7rem;left:50%;transform:translateX(-50%);display:flex;gap:.42rem;z-index:3}
+  .gal-dots b{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.6);cursor:pointer;transition:.2s}
+  .gal-dots b.active{background:#fff;transform:scale(1.3)}
+  .note.single .gal-arrow,.note.single .gal-dots{display:none}
+  .note.nogallery .gallery{display:none}
+  .note-body{padding:1.25rem 1.35rem 1.45rem}
+  .note-body h3{font-size:1.4rem;margin-bottom:.45rem}
+  .note-desc{font-size:.97rem;color:var(--ink-soft)}
+  .note-ing{font-size:.97rem;color:var(--ink);margin-top:.9rem;line-height:1.6}
+  .note-ing b{color:var(--berry);font-weight:600}
+  .smallcakes-card{cursor:pointer}
+  .smallcakes-cta{margin-top:.6rem;color:var(--berry)}
+  /* gap:0 — the flex gap would space the dots too; the logo image gets its
+     own margin instead, so the wordmark stays tight */
+  .logo{display:inline-flex;align-items:center;gap:0}
+  .logo-mark{width:76px;height:76px;flex:0 0 76px;margin-right:.55rem}
+  .note-nutr{font-size:.8rem;color:var(--ink-soft);margin-top:.5rem}
+  .note-nutr b{color:var(--ink)}
+  .note-body .badges{margin-top:1rem}
+  .note-order{margin-top:1.2rem;width:100%;justify-content:center}
+  body.noscroll{overflow:hidden}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+  .split.rev .txt{order:2}
+  #about .split{align-items:start;grid-template-columns:298px minmax(0,1fr);gap:clamp(1.6rem,3vw,2.6rem)}
+  /* no width cap here: the story column runs the full width beside the photo,
+     and the headline is sized to hold one line at desktop */
+  #about h2{font-size:clamp(1.9rem,3.4vw,2.65rem)}
+  /* the site-wide .lead cap is 46ch; here the column is wider, so let it run on */
+  #about .lead{max-width:58ch}
+  #about .about-photo{align-self:start;margin-top:clamp(1.2rem,4vw,3.5rem)}
+  .story-expand{margin-top:1rem;cursor:pointer}
+  .story-blog{margin-top:.9rem;font-size:.97rem;color:var(--ink-soft)}
+  .story-blog a{color:var(--berry);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+  .story-expand .more-block,.story-expand .more-inline{display:none}
+  .story-expand .story-toggle,.story-expand .dots{color:var(--berry);font-weight:600}
+  .story-expand:hover .story-toggle{text-decoration:underline}
+  .story-expand .less-label{display:none}
+  .story-expand.open .more-block{display:block;margin-top:1rem}
+  .story-expand.open .more-inline{display:inline}
+  .story-expand.open .dots,.story-expand.open .more-label{display:none}
+  .story-expand.open .less-label{display:inline}
+  #events .split{grid-template-columns:1fr 1.1fr}
+  @media(max-width:760px){.split,.split.rev,#events .split,#about .split{grid-template-columns:1fr}.split.rev .txt{order:0}}
+  .about-photo{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:var(--radius-lg);box-shadow:var(--shadow);align-self:end}
+  .carousel{position:relative;aspect-ratio:1/1;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
+  .carousel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease}
+  .carousel img.active{opacity:1}
+  .carousel .dots{position:absolute;bottom:.8rem;left:50%;transform:translateX(-50%);display:flex;gap:.45rem;z-index:2}
+  .carousel .dots b{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer;transition:.2s}
+  .carousel .dots b.active{background:#fff;transform:scale(1.25)}
+
+  .counter{background:var(--berry);color:#fff;text-align:center}
+  .counter .num{font-family:var(--serif);font-size:clamp(3rem,9vw,5.5rem);font-weight:600;line-height:1}
+  .counter p{color:rgba(255,255,255,.85);margin-top:.4rem}
+
+  .courses{background:var(--cream-light)}
+  /* courses.jpg is 1024×559; .about-photo would force it square and cut ~45% off
+     the sides, clipping the people at the table. let it keep its own shape */
+  #courses .about-photo{aspect-ratio:auto;height:auto}
+  @media(max-width:760px){#courses .txt{order:-1}}
+
+  .order{background:var(--cream-deep)}
+  .order-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(2rem,5vw,3.5rem)}
+  @media(max-width:760px){.order-grid{grid-template-columns:1fr}}
+  .steps{display:grid;gap:1.1rem;margin-top:1.4rem}
+  .step{display:flex;gap:.9rem;align-items:flex-start}
+  .step .n{flex:0 0 auto;width:34px;height:34px;border-radius:50%;background:var(--berry);color:#fff;display:grid;place-items:center;font-weight:600;font-family:var(--serif)}
+  .contact-card{background:var(--card);border-radius:var(--radius-lg);padding:1.8rem;box-shadow:var(--shadow)}
+  .field{margin-bottom:1rem}
+  .field label{display:block;font-size:.85rem;font-weight:600;margin-bottom:.35rem}
+  .field input,.field textarea,.field select{width:100%;padding:.75rem .9rem;border:1.5px solid var(--line);border-radius:12px;font:inherit;background:var(--cream);color:var(--ink)}
+  .field textarea{min-height:96px;resize:vertical}
+  .direct{margin-top:1.2rem;font-size:.92rem;color:var(--ink-soft);display:flex;flex-direction:column;gap:.4rem}
+  .direct a{color:var(--berry);font-weight:600}
+
+  .quotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.4rem;margin-top:2rem}
+  .quote{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow);margin:0}
+  .quote .stars{color:var(--gold);font-size:.95rem;letter-spacing:.12em;margin-bottom:.6rem}
+  .quote p{font-family:var(--serif);font-size:1.05rem;color:var(--ink);font-style:italic;line-height:1.5}
+  .quote .who{margin-top:1rem;font-size:.85rem;color:var(--ink-soft);font-weight:600;font-style:normal}
+
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:.2rem 1.1rem;margin-bottom:.7rem}
+  details summary{cursor:pointer;font-weight:600;padding:.9rem 0;list-style:none;display:flex;justify-content:space-between;align-items:center}
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{content:"+";font-size:1.4rem;color:var(--berry)}
+  details[open] summary::after{content:"–"}
+  details p{padding-bottom:1rem}
+
+  footer{background:var(--ink);color:var(--cream);padding:3rem 0 2rem}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:2rem}
+  footer a{color:var(--cream)}
+  footer .muted{color:#9a8f81;font-size:.85rem}
+  .foot-links{display:flex;gap:1.2rem;flex-wrap:wrap}
+  .center{text-align:center;margin-inline:auto}
+  .mt{margin-top:1.6rem}
+
+/* ── Blog / Journal ───────────────────────────────────────────────
+   Used by blog.html (the post list) and blog/*.html (single posts).  */
+.page-head{padding:3.4rem 0 1.6rem;background:var(--cream-deep);border-bottom:1px solid var(--line)}
+.page-head h1{font-size:clamp(2rem,5vw,3rem);margin:.3rem 0 .5rem}
+.page-head .lead{max-width:52ch}
+
+.posts{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.6rem;padding:2.6rem 0 1rem}
+.post-card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;transition:.25s;text-decoration:none;color:inherit}
+.post-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg)}
+.post-card .pic{aspect-ratio:4/3;background:var(--cream-deep);overflow:hidden}
+.post-card .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.post-card .body{padding:1.1rem 1.2rem 1.3rem;display:flex;flex-direction:column;flex:1}
+.post-card h2{font-size:1.15rem;margin:0 0 .35rem;line-height:1.25}
+.post-card .meta{font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.5rem}
+.post-card p{font-size:.92rem;color:var(--ink-soft);flex:1;margin:0}
+.post-card .more{margin-top:.9rem;font-size:.85rem;font-weight:600;color:var(--berry)}
+
+/* a single post */
+.post{max-width:680px;margin:0 auto;padding:2.8rem 0 1rem}
+.post .meta{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:.6rem}
+.post h1{font-size:clamp(1.8rem,4.5vw,2.6rem);margin-bottom:.8rem}
+.post .hero-img{width:100%;border-radius:var(--radius);margin:1.4rem 0 2rem;display:block}
+.post p{margin-bottom:1.1rem}
+.post h2{font-size:1.3rem;margin:2rem 0 .6rem}
+.post ul{margin:0 0 1.1rem 1.1rem}
+.post li{margin-bottom:.4rem}
+.post .back{display:inline-block;margin-top:2rem;font-weight:600;color:var(--berry);text-decoration:none}
+.post .back:hover{text-decoration:underline}
