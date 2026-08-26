@@ -29,6 +29,31 @@ Everything on the page is hers: her photographs, her ingredient lists, and her
 measured nutrition figures where she has them — and no figures where she
 hasn't.
 
+## How this site is built to be found
+
+A website that people like is not automatically a website machines can read.
+Alongside the design, this site carries **structured data** — a machine-readable
+description of the business and every cake, written in
+[schema.org](https://schema.org/) vocabulary.
+
+- **`LocalBusiness` / `Bakery`** — who Katya is, where she bakes, since when
+- **14 `Product` nodes** — every cake, with its description, photograph and
+  category, all pointing back to one business identity
+- **`Offer` with `UnitPriceSpecification`** — 1,100 ISK *per 100 g*, not a flat
+  price, because that is what she actually charges. Plus the 600 g minimum on
+  small cakes and the delivery terms
+- **`FAQPage`** — the five questions customers ask most
+- **`robots.txt`** explicitly welcoming GPTBot, Google-Extended, ClaudeBot and
+  PerplexityBot, and **`sitemap.xml`** so nothing is missed
+
+The rule followed throughout: **only assert what is true.** A placeholder phone
+number was removed rather than left in place, and the Friday Box carries no price
+because it isn't sold by weight. Structured data is a set of promises made to
+machines on the client's behalf — a missing field costs nothing, a wrong one
+costs trust.
+
+Full write-up: [`FOUNDABILITY-guide.md`](../FOUNDABILITY-guide.md)
+
 ## About the site
 
 A single page of hand-written HTML and CSS — no framework, no build step, no
