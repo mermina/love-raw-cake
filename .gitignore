@@ -6,3 +6,8 @@ Katya_26.06_phone.html
 
 # temp folder used when building the phone preview
 .embed_tmp/
+
+# Retired: single-file builds are no longer maintained (see README)
+*_SINGLE-FILE.html
+*_standalone.html
+_to_delete/
