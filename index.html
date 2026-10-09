@@ -1025,11 +1025,15 @@
           <a href="https://instagram.com/love.raw.cake" target="_blank" rel="noopener">⌾ @love.raw.cake</a>
         </div>
       </div>
-      <form class="contact-card" onsubmit="event.preventDefault();alert('Demo form — wiring to email/Formspree comes next [P6].');">
-        <div class="field"><label>Your name</label><input type="text" required placeholder="Name" /></div>
-        <div class="field"><label>Best way to reach you</label><input type="text" required placeholder="Email or phone" /></div>
+      <form class="contact-card" action="https://formsubmit.co/ketlight@gmail.com" method="POST">
+        <!-- FormSubmit (no account). First real submission sends Katya a one-time activation email; nothing arrives until she clicks it.
+             After activation FormSubmit offers a random alias — swap it in for the address above to hide the email from spam bots. -->
+        <input type="hidden" name="_subject" value="New cake request — loverawcake.com" />
+        <input type="hidden" name="_template" value="table" />
+        <div class="field"><label>Your name</label><input type="text" name="name" required placeholder="Name" /></div>
+        <div class="field"><label>Best way to reach you</label><input type="text" name="contact" required placeholder="Email or phone" /></div>
         <div class="field"><label>Which cake?</label>
-          <select id="orderSelect">
+          <select id="orderSelect" name="cake">
             <option>Chocolate Banana</option><option>Dubai Chocolate Cake</option>
             <option>Macadamia Salted Caramel Cheesecake</option><option>Tiramisu Cake</option>
             <option>Chocolate Hazelnut Tart</option>
@@ -1039,9 +1043,9 @@
             <option>Blackcurrant Banana (small)</option><option>Salted Peanut Ball (small)</option>
             <option>Small-cakes platter</option><option>Event / large order</option><option>Course — join the waitlist</option><option>Not sure — help me choose</option>
           </select></div>
-        <div class="field"><label>When do you need it?</label><input type="date" /></div>
-        <div class="field"><label>Anything else?</label><textarea placeholder="Number of cakes, allergies, occasion…"></textarea></div>
-        <button class="btn btn-primary" style="width:100%">Send my request</button>
+        <div class="field"><label>When do you need it?</label><input type="date" name="date_needed" /></div>
+        <div class="field"><label>Anything else?</label><textarea name="message" placeholder="Number of cakes, allergies, occasion…"></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Send my request</button>
       </form>
     </div>
   </div>
@@ -1092,7 +1096,7 @@
       <h3 id="priceTitle">Simple pricing, by weight.</h3>
       <ul class="price-list">
         <li><b>Cakes — from 1,100 ISK per 100 g.</b> A whole cake is usually 800–1,200 g.</li>
-        <li><b>Small cakes — S / M / L</b> (30 g · 50 g · 100 g). Minimum order 600 g of one kind.</li>
+        <li><b>Small cakes — from 1,100 ISK per 100 g.</b> S / M / L (30 g · 50 g · 100 g). Minimum order 600 g of one kind.</li>
         <li><b>Writing on the cake — from 1,500 ISK.</b></li>
       </ul>
       <p class="note-nutr">Prices may change if the cost of ingredients rises at the time of your order.</p>

@@ -52,7 +52,7 @@ because it isn't sold by weight. Structured data is a set of promises made to
 machines on the client's behalf — a missing field costs nothing, a wrong one
 costs trust.
 
-Full write-up: [`FOUNDABILITY-guide.md`](../FOUNDABILITY-guide.md)
+Full write-up: [`FOUNDABILITY-guide.md`](../docs/FOUNDABILITY-guide.md)
 
 ## About the site
 
