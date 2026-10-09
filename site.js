@@ -230,6 +230,7 @@
     function selectOrder(name){
       const sel=document.getElementById('orderSelect'); if(!sel||!name)return;
       [...sel.options].forEach(o=>{ if(o.textContent.trim()===name.trim()) sel.value=o.value; });
+      sel.dispatchEvent(new Event('change'));
     }
 
     document.querySelectorAll('[data-cake]').forEach(cardEl=>{
@@ -304,6 +305,7 @@
       const sel=document.getElementById('orderSelect'); if(!sel) return;
       const want=b.dataset.order.trim();
       [...sel.options].forEach(o=>{ if(o.textContent.trim()===want) sel.value=o.value; });
+      sel.dispatchEvent(new Event('change'));
     });
   });
 
@@ -320,3 +322,26 @@
     d.setCustomValidity(d.value && d.value<min ? 'Please choose a date at least 3 days from today.' : '');
   });
 })();
+
+/* Quantity: small cakes have a minimum of 6 pieces; everything else from 1.
+   Runs on every cake change, including when a card's "Order" button preselects it. */
+(function(){
+  const sel=document.getElementById('orderSelect');
+  const qty=document.querySelector('input[name="quantity"]');
+  const hint=document.getElementById('qtyHint');
+  if(!sel||!qty) return;
+  const SMALL_MIN=6;
+  function update(){
+    const opt=sel.options[sel.selectedIndex];
+    const small=!!(opt && opt.parentElement && opt.parentElement.label==='Small cakes');
+    const min=small?SMALL_MIN:1;
+    qty.min=min;
+    if(!qty.value || +qty.value<min) qty.value=min;
+    if(hint) hint.textContent= small
+      ? 'Small cakes: minimum 6 pieces.'
+      : 'Number of whole cakes.';
+  }
+  sel.addEventListener('change',update);
+  update();
+})();
+

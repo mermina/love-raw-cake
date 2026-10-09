@@ -1031,7 +1031,7 @@
         <input type="hidden" name="_subject" value="New cake request — loverawcake.com" />
         <input type="hidden" name="_template" value="table" />
         <div class="field"><label>Your name</label><input type="text" name="name" required placeholder="Name" /></div>
-        <div class="field"><label>Best way to reach you</label><input type="text" name="contact" required placeholder="Email or phone" /></div>
+        <div class="field"><label>Your email</label><input type="email" name="email" required autocomplete="email" placeholder="you@example.com" /></div>
         <div class="field"><label>Which cake?</label>
           <select id="orderSelect" name="cake" required>
             <option value="" disabled selected>Choose a cake…</option>
@@ -1052,7 +1052,7 @@
             </optgroup>
           </select></div>
         <div class="field"><label>Quantity</label><input type="number" name="quantity" min="1" max="200" step="1" value="1" required inputmode="numeric" />
-          <small class="muted">Whole cakes, or pieces for small cakes (minimum 600 g of one kind).</small></div>
+          <small class="muted" id="qtyHint">Number of whole cakes.</small></div>
         <div class="field"><label>When do you need it?</label><input type="date" id="orderDate" name="date_needed" required />
           <small class="muted">Please allow at least 3 days — every cake is made to order.</small></div>
         <div class="field"><label>Anything else?</label><textarea name="message" placeholder="Another cake too? Allergies, occasion…"></textarea></div>
