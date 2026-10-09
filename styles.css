@@ -196,7 +196,7 @@
   .carousel .dots b{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.55);cursor:pointer;transition:.2s}
   .carousel .dots b.active{background:#fff;transform:scale(1.25)}
 
-  .counter{background:var(--berry);color:#fff;text-align:center}
+  .counter{background:var(--berry);color:#fff;text-align:center;padding:clamp(2rem,4.5vw,3.75rem) 0} /* a div, not a section (no heading) — so it needs the section padding itself */
   .counter .num{font-family:var(--serif);font-size:clamp(3rem,9vw,5.5rem);font-weight:600;line-height:1}
   .counter p{color:rgba(255,255,255,.85);margin-top:.4rem}
 
