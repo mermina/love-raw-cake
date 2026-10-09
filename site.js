@@ -306,3 +306,17 @@
       [...sel.options].forEach(o=>{ if(o.textContent.trim()===want) sel.value=o.value; });
     });
   });
+
+/* Order date: earliest pickable day is 3 days from today (Katya's lead time).
+   Uses the visitor's local date, not UTC, so the limit doesn't slip near midnight. */
+(function(){
+  const d=document.getElementById('orderDate'); if(!d) return;
+  const LEAD_DAYS=3;
+  const t=new Date(); t.setDate(t.getDate()+LEAD_DAYS);
+  const pad=n=>String(n).padStart(2,'0');
+  const min=t.getFullYear()+'-'+pad(t.getMonth()+1)+'-'+pad(t.getDate());
+  d.min=min;
+  d.addEventListener('change',()=>{
+    d.setCustomValidity(d.value && d.value<min ? 'Please choose a date at least 3 days from today.' : '');
+  });
+})();

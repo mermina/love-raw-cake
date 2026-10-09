@@ -78,7 +78,7 @@
           "name": "How much notice do you need to order a cake?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Usually 1 to 3 days. Some recipes ferment for 24 hours; a few can be ready the next day. For events, the more notice the better."
+            "text": "At least 3 days. Every cake is made to order, and some recipes ferment for 24 hours. For events, the more notice the better."
           }
         },
         {
@@ -941,7 +941,7 @@
     </div>
 
 
-    <p class="menu-note">🕒 Most cakes need <b>1–3 days’ notice</b> (some, like fermented-cashew recipes, need 24h to ferment). Whole cakes, or small cakes by the plate. <button type="button" class="info-pill" data-open-prices>Prices &amp; Delivery</button></p>
+    <p class="menu-note">🕒 Please order <b>at least 3 days ahead</b> — every cake is made to order (some, like fermented-cashew recipes, need 24h to ferment). Whole cakes, or small cakes by the plate. <button type="button" class="info-pill" data-open-prices>Prices &amp; Delivery</button></p>
   </div>
 </section>
 
@@ -1033,18 +1033,29 @@
         <div class="field"><label>Your name</label><input type="text" name="name" required placeholder="Name" /></div>
         <div class="field"><label>Best way to reach you</label><input type="text" name="contact" required placeholder="Email or phone" /></div>
         <div class="field"><label>Which cake?</label>
-          <select id="orderSelect" name="cake">
-            <option>Chocolate Banana</option><option>Dubai Chocolate Cake</option>
-            <option>Macadamia Salted Caramel Cheesecake</option><option>Tiramisu Cake</option>
-            <option>Chocolate Hazelnut Tart</option>
-            <option>Mango-Passion Fruit Cake</option><option>Carrot Cake</option>
-            <option>Lemon Cake</option><option>Raspberry Cake</option><option>Strawberry Cake</option>
-            <option>Matcha Ananas (small)</option><option>Strawberry with Almond (small)</option>
-            <option>Blackcurrant Banana (small)</option><option>Salted Peanut Ball (small)</option>
-            <option>Small-cakes platter</option><option>Event / large order</option><option>Course — join the waitlist</option><option>Not sure — help me choose</option>
+          <select id="orderSelect" name="cake" required>
+            <option value="" disabled selected>Choose a cake…</option>
+            <optgroup label="Cakes">
+              <option>Chocolate Banana</option><option>Dubai Chocolate Cake</option>
+              <option>Macadamia Salted Caramel Cheesecake</option><option>Tiramisu Cake</option>
+              <option>Chocolate Hazelnut Tart</option><option>Mango-Passion Fruit Cake</option>
+              <option>Carrot Cake</option><option>Lemon Cake</option>
+              <option>Matcha Ananas</option><option>Blueberry Chocolate Cheesecake</option>
+            </optgroup>
+            <optgroup label="Small cakes">
+              <option>Matcha Ananas (small)</option><option>Blackcurrant Banana (small)</option>
+              <option>Salted Peanut Ball (small)</option><option>Mixed small-cakes plate</option>
+            </optgroup>
+            <optgroup label="Other">
+              <option>Friday Box</option><option>Event / large order</option>
+              <option>Course — join the waitlist</option><option>Not sure — help me choose</option>
+            </optgroup>
           </select></div>
-        <div class="field"><label>When do you need it?</label><input type="date" name="date_needed" /></div>
-        <div class="field"><label>Anything else?</label><textarea name="message" placeholder="Number of cakes, allergies, occasion…"></textarea></div>
+        <div class="field"><label>Quantity</label><input type="number" name="quantity" min="1" max="200" step="1" value="1" required inputmode="numeric" />
+          <small class="muted">Whole cakes, or pieces for small cakes (minimum 600 g of one kind).</small></div>
+        <div class="field"><label>When do you need it?</label><input type="date" id="orderDate" name="date_needed" required />
+          <small class="muted">Please allow at least 3 days — every cake is made to order.</small></div>
+        <div class="field"><label>Anything else?</label><textarea name="message" placeholder="Another cake too? Allergies, occasion…"></textarea></div>
         <button type="submit" class="btn btn-primary" style="width:100%">Send my request</button>
       </form>
     </div>
@@ -1058,7 +1069,7 @@
     <div class="mt">
       <details open><summary>Are the cakes really healthy?</summary><p>Yes — they’re built from whole, real ingredients: home-made plant milks, nuts, fruit, berries, cacao and coconut butter. No refined sugar, no flour, no dairy, no eggs. Naturally vegan and gluten-free.</p></details>
       <details><summary>Do you cater to nut allergies?</summary><p>Honestly, no — nuts are a core ingredient in almost everything I make, so if you have a serious nut allergy these cakes aren’t safe for you, and I’d never want to risk it.</p></details>
-      <details><summary>How much notice do you need?</summary><p>Usually 1–3 days. Some recipes ferment for 24 hours; a few can be ready the next day. For events, the more notice the better.</p></details>
+      <details><summary>How much notice do you need?</summary><p>At least 3 days. Every cake is made to order, and some recipes ferment for 24 hours. For events, the more notice the better.</p></details>
       <details><summary>How do I pay and collect?</summary><p>Pickup or delivery — the delivery costs are in <button type="button" class="link-btn" data-open-prices>Prices &amp; Delivery</button> above. We agree the day, the time and how you’d like to pay when you get in touch.<!-- payment method still to confirm with Katya — see TASKS.md [P6] --></p></details>
       <details><summary>Can I order for a company or event?</summary><p>Absolutely — see the <a href="#events">events section</a>. Finger-food minis, platters, and larger orders from ~50 pieces.</p></details>
     </div>
