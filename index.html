@@ -1032,6 +1032,7 @@
         <input type="hidden" name="_template" value="table" />
         <div class="field"><label>Your name</label><input type="text" name="name" required placeholder="Name" /></div>
         <div class="field"><label>Your email</label><input type="email" name="email" required autocomplete="email" placeholder="you@example.com" /></div>
+        <div class="field"><label>Your phone</label><input type="tel" name="phone" required autocomplete="tel" inputmode="tel" pattern="\+?[0-9 ]{7,20}" title="Please enter a phone number (at least 7 digits)." placeholder="+354 …" /></div>
         <div class="field"><label>Which cake?</label>
           <select id="orderSelect" name="cake" required>
             <option value="" disabled selected>Choose a cake…</option>
@@ -1055,7 +1056,7 @@
           <small class="muted" id="qtyHint">Number of whole cakes.</small></div>
         <div class="field"><label>When do you need it?</label><input type="date" id="orderDate" name="date_needed" required />
           <small class="muted">Please allow at least 3 days — every cake is made to order.</small></div>
-        <div class="field"><label>Anything else?</label><textarea name="message" placeholder="Another cake too? Allergies, occasion…"></textarea></div>
+        <div class="field"><label>Anything else?</label><textarea name="message" required placeholder="Another cake too? Allergies, occasion…"></textarea></div>
         <button type="submit" class="btn btn-primary" style="width:100%">Send my request</button>
       </form>
     </div>
